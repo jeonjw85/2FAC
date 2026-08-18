@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "2fac",
+  "version": "0.1.0",
+  "identifier": "kr.jjw.2fac",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "2fac",
+        "width": 420,
+        "height": 680,
+        "minWidth": 380,
+        "minHeight": 500
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' ipc: http://ipc.localhost ws://localhost:1420"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "publisher": "Jeongwan Jeon",
+    "copyright": "Copyright (C) 2026 Jeongwan Jeon",
+    "category": "Utility",
+    "shortDescription": "Local-first 2FA TOTP authenticator",
+    "longDescription": "Encrypted local TOTP vault. Secrets stay on this machine. No network, no telemetry.",
+    "license": "GPL-3.0-only",
+    "licenseFile": "../LICENSE",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
