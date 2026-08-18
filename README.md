@@ -1,17 +1,52 @@
 # 2FAC
 
-Local-first 2FA.  
-Secrets never leave this machine.
+[한국어](README.ko.md)
 
-| macOS  | Windows | Linux                |
-| ------ | ------- | -------------------- |
-| `.dmg` | `.exe`  | `.AppImage` / `.deb` |
+Local-first TOTP authenticator for the desktop. Secrets never leave this machine.
 
-[Releases](../../releases) · in-place update replaces the current app. Vault stays. Unsigned: macOS Privacy & Security → Open Anyway.
+The vault is encrypted with Argon2id and AES-256-GCM. Codes are computed in Rust. The UI never sees raw secrets. There is no cloud, no account, and no telemetry. The only network use is a signed update check against GitHub Releases.
+
+UI language follows the OS (English / Korean).
+
+## Install
+
+Download a build from [Releases](https://github.com/jeonjw85/2FAC/releases).
+
+| macOS | Windows | Linux |
+| --- | --- | --- |
+| `.dmg` (Apple Silicon and Intel) | NSIS `.exe` | `.AppImage` or `.deb` |
+
+Builds are unsigned. macOS: System Settings → Privacy & Security → Open Anyway. Windows SmartScreen may warn on first run.
+
+Installing a newer build over the same `kr.jjw.2fac` app keeps the vault. Do not run a second copy from Downloads.
+
+## Updates
+
+On launch, 2FAC checks GitHub Releases. If a newer signed build exists, it asks before replacing the current app in place and restarting. The vault stays on disk.
+
+A published release (not a draft) is required for that check to see the new version.
+
+## Features
+
+- TOTP (RFC 6238): SHA-1 / SHA-256 / SHA-512, custom digits and period
+- Add by secret, `otpauth://` URI, or QR image (file / clipboard)
+- Import: 2FAC encrypted backup, Aegis JSON, andOTP JSON, otpauth URI lists, Google Authenticator transfer QR (`otpauth-migration://`)
+- Encrypted backup export (same vault format)
+- Clipboard auto-clears 30 seconds after copying a code
+- Auto-lock on idle and when the window closes
+
+## Build
+
+Needs Rust stable, pnpm, and the [Tauri v2 prerequisites](https://v2.tauri.app/start/prerequisites/).
 
 ```bash
 pnpm install
+pnpm lint
+pnpm build
+cd src-tauri && cargo test && cargo clippy --all-targets -- -D warnings
 pnpm tauri build
 ```
 
-GPL-3.0-only
+## License
+
+[GPL-3.0-only](LICENSE)
