@@ -3,6 +3,7 @@ mod gauth;
 mod import;
 mod otpauth;
 mod totp;
+mod update;
 mod vault;
 
 use tauri::Manager;
@@ -12,6 +13,7 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_clipboard_manager::init())
+        .plugin(tauri_plugin_updater::Builder::new().build())
         .setup(|app| {
             let dir = app.path().app_data_dir()?;
             std::fs::create_dir_all(&dir)?;
@@ -37,7 +39,9 @@ pub fn run() {
             commands::delete_account,
             commands::get_code,
             commands::export_backup,
-            commands::import_file
+            commands::import_file,
+            update::check_update,
+            update::install_update
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
