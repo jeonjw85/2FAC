@@ -19,6 +19,10 @@ export interface CodeInfo {
   period: number;
 }
 
+export interface UpdateInfo {
+  version: string;
+}
+
 export interface ImportSummary {
   format: string;
   imported: number;

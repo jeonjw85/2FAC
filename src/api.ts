@@ -1,5 +1,5 @@
 import { invoke } from "@tauri-apps/api/core";
-import type { AccountMeta, CodeInfo, ImportSummary, Status } from "./types";
+import type { AccountMeta, CodeInfo, ImportSummary, Status, UpdateInfo } from "./types";
 
 export const api = {
   status: () => invoke<Status>("status"),
@@ -32,4 +32,6 @@ export const api = {
   exportBackup: (path: string) => invoke<void>("export_backup", { path }),
   importFile: (path: string, password?: string) =>
     invoke<ImportSummary>("import_file", { path, password }),
+  checkUpdate: () => invoke<UpdateInfo | null>("check_update"),
+  installUpdate: () => invoke<void>("install_update"),
 };

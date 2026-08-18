@@ -64,6 +64,10 @@ const en = {
         "The vault is re-encrypted with a new key. At least 8 characters.",
     change: "Change",
     changing: "Changing..",
+    updateTitle: "Update available",
+    updateInstall: "Install",
+    updateInstalling: "Installing..",
+    updateFailed: "Update failed",
 };
 
 const ko: typeof en = {
@@ -130,6 +134,10 @@ const ko: typeof en = {
         "Vault를 새 키로 다시 암호화합니다. 8자 이상이어야 합니다",
     change: "변경",
     changing: "변경 중..",
+    updateTitle: "업데이트",
+    updateInstall: "설치",
+    updateInstalling: "설치 중..",
+    updateFailed: "업데이트 실패",
 };
 
 export const lang = (navigator.language || "en").toLowerCase().startsWith("ko")
@@ -190,12 +198,19 @@ const errors: Record<string, { en: string; ko: string }> = {
         en: "Could not parse this code.",
         ko: "이 코드는 읽을 수 없습니다",
     },
+    "Update failed": { en: "Update failed.", ko: "업데이트 실패" },
 };
 
 export function localizeError(e: unknown): string {
     const s = String(e);
     const hit = errors[s];
     return hit ? hit[lang] : s;
+}
+
+export function updateMessage(version: string): string {
+    return lang === "ko"
+        ? `2FAC ${version}을 설치합니다. 앱이 다시 시작됩니다. Vault는 이 기기에 남습니다`
+        : `Install 2FAC ${version}. The app will restart. Your vault stays on this device.`;
 }
 
 export function deleteMessage(name: string): string {
