@@ -55,10 +55,13 @@ jobs:
       - uses: tauri-apps/tauri-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
         with:
           tagName: v__VERSION__
           releaseName: "2FAC v__VERSION__"
-          releaseBody: "Unsigned local-first build. macOS: System Settings → Privacy & Security → Open Anyway. Source is this repository (GPL-3.0-only)."
+          releaseBody: "In-place update replaces the current app. Vault stays. Unsigned: macOS Privacy & Security → Open Anyway. Source is this repository (GPL-3.0-only)."
           releaseDraft: true
           prerelease: false
+          updaterJsonPreferNsis: true
           args: ${{ matrix.args }}
