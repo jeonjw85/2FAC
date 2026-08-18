@@ -2,6 +2,9 @@
 
 [한국어](README.ko.md)
 
+[![CI](https://github.com/jeonjw85/profNote/actions/workflows/ci.yml/badge.svg)](https://github.com/jeonjw85/profNote/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/jeonjw85/profNote)](https://github.com/jeonjw85/profNote/releases/latest)
+
 Local-first TOTP authenticator for the desktop. Secrets never leave this machine.
 
 The vault is encrypted with Argon2id and AES-256-GCM. Codes are computed in Rust. The UI never sees raw secrets. There is no cloud, no account, and no telemetry. The only network use is a signed update check against GitHub Releases.
@@ -12,8 +15,8 @@ UI language follows the OS (English / Korean).
 
 Download a build from [Releases](https://github.com/jeonjw85/2FAC/releases).
 
-| macOS | Windows | Linux |
-| --- | --- | --- |
+| macOS                            | Windows     | Linux                 |
+| -------------------------------- | ----------- | --------------------- |
 | `.dmg` (Apple Silicon and Intel) | NSIS `.exe` | `.AppImage` or `.deb` |
 
 Builds are unsigned. macOS: System Settings → Privacy & Security → Open Anyway. Windows SmartScreen may warn on first run.

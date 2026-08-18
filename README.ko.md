@@ -2,6 +2,9 @@
 
 [English](README.md)
 
+[![CI](https://github.com/jeonjw85/2FAC/actions/workflows/ci.yml/badge.svg)](https://github.com/jeonjw85/2FAC/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/jeonjw85/2FAC)](https://github.com/jeonjw85/2FAC/releases/latest)
+
 데스크톱용 로컬 우선 TOTP 인증기입니다. 비밀키는 이 기기를 떠나지 않습니다.
 
 Vault는 Argon2id와 AES-256-GCM으로 암호화됩니다. 코드는 Rust에서 계산하고, UI는 원본 시크릿을 보지 않습니다. 클라우드, 계정, 텔레메트리는 없습니다. 네트워크는 GitHub Releases의 서명된 업데이트 확인에만 씁니다.
@@ -12,8 +15,8 @@ UI 언어는 OS를 따릅니다 (영어 / 한국어).
 
 [Releases](https://github.com/jeonjw85/2FAC/releases)에서 빌드를 받습니다.
 
-| macOS | Windows | Linux |
-| --- | --- | --- |
+| macOS                         | Windows     | Linux                   |
+| ----------------------------- | ----------- | ----------------------- |
 | `.dmg` (Apple Silicon, Intel) | NSIS `.exe` | `.AppImage` 또는 `.deb` |
 
 서명이 없습니다. macOS: 시스템 설정 → 개인정보 보호 및 보안 → 확인 후 열기. Windows는 처음 실행 시 SmartScreen이 경고할 수 있습니다.
