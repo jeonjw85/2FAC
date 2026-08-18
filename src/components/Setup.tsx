@@ -32,7 +32,7 @@ export default function Setup({ onDone }: { onDone: () => void }) {
   return (
     <div className="auth">
       <div className="auth-card">
-        <h1>2fac</h1>
+        <h1>2FAC</h1>
         <p>{t.setupDesc}</p>
         <input
           type="password"

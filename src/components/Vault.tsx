@@ -73,7 +73,7 @@ export default function Vault({ onLock }: { onLock: () => void }) {
 
     const exportBackup = async () => {
         const path = await save({
-            defaultPath: "2fac-backup.dat",
+            defaultPath: "2FAC-backup.dat",
             filters: [{ name: "2FAC backup", extensions: ["dat"] }],
         });
         if (!path) return;
