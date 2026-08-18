@@ -30,9 +30,10 @@
     "copyright": "Copyright (C) 2026 Jeongwan Jeon",
     "category": "Utility",
     "shortDescription": "Local-first 2FA TOTP authenticator",
-    "longDescription": "Encrypted local TOTP vault. Secrets stay on this machine. No network, no telemetry.",
+    "longDescription": "Encrypted local TOTP vault. Secrets stay on this machine. No telemetry. Network only for signed GitHub Releases updates.",
     "license": "GPL-3.0-only",
     "licenseFile": "../LICENSE",
+    "createUpdaterArtifacts": true,
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
@@ -40,5 +41,13 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ]
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDRCQjdBNjcwMkRGM0MxOUMKUldTY3dmTXRjS2EzUzBXcWNUMkd1dCtrbUtUbC9XOXloUVVFdzBJajJxQmZHQ2J2cHlPaFdKZ0cK",
+      "endpoints": [
+        "https://github.com/jeonjw85/2FAC/releases/latest/download/latest.json"
+      ]
+    }
   }
 }
