@@ -57,7 +57,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tagName: v__VERSION__
-          releaseName: "2fac v__VERSION__"
+          releaseName: "2FAC v__VERSION__"
           releaseBody: "Unsigned local-first build. macOS: System Settings → Privacy & Security → Open Anyway. Source is this repository (GPL-3.0-only)."
           releaseDraft: true
           prerelease: false
