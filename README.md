@@ -1,10 +1,11 @@
-# 2fac
+# 2FAC
 
-Local-first 2FA. Secrets never leave this machine.
+Local-first 2FA.  
+Secrets never leave this machine.
 
-| macOS | Windows | Linux |
-| --- | --- | --- |
-| `.dmg` | `.exe` | `.AppImage` / `.deb` |
+| macOS  | Windows | Linux                |
+| ------ | ------- | -------------------- |
+| `.dmg` | `.exe`  | `.AppImage` / `.deb` |
 
 [Releases](../../releases) · unsigned. macOS: Privacy & Security → Open Anyway.
 
