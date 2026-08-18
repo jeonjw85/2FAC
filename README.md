@@ -7,7 +7,7 @@ Secrets never leave this machine.
 | ------ | ------- | -------------------- |
 | `.dmg` | `.exe`  | `.AppImage` / `.deb` |
 
-[Releases](../../releases) · unsigned. macOS: Privacy & Security → Open Anyway.
+[Releases](../../releases) · in-place update replaces the current app. Vault stays. Unsigned: macOS Privacy & Security → Open Anyway.
 
 ```bash
 pnpm install
