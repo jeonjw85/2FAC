@@ -21,7 +21,7 @@ const en = {
     addAccount: "Add account",
     emptyTitle: "Your vault is empty",
     emptyDesc:
-        "Add an account, or import from Aegis, andOTP, an otpauth:// list, or a 2fac backup.",
+        "Add an account, or import from Aegis, andOTP, an otpauth:// list, or a 2FAC backup.",
     backupExported: "Backup exported.",
     exportFailed: "Export failed",
     importFailed: "Import failed",
@@ -87,7 +87,7 @@ const ko: typeof en = {
     addAccount: "계정 추가",
     emptyTitle: "Vault가 비어있습니다",
     emptyDesc:
-        "계정을 추가하거나 Aegis, andOTP, otpauth:// 목록, 2fac 백업에서 가져오세요",
+        "계정을 추가하거나 Aegis, andOTP, otpauth:// 목록, 2FAC 백업에서 가져오세요",
     backupExported: "백업을 내보냈습니다",
     exportFailed: "내보내기 실패",
     importFailed: "가져오기 실패",
@@ -209,7 +209,7 @@ export function failMessage(prefix: string, e: unknown): string {
 }
 
 const formats: Record<string, { en: string; ko: string }> = {
-    "2fac backup": { en: "2fac backup", ko: "2fac 백업" },
+    "2FAC backup": { en: "2FAC backup", ko: "2FAC 백업" },
     "Aegis export": { en: "Aegis export", ko: "Aegis 내보내기" },
     "andOTP export": { en: "andOTP export", ko: "andOTP 내보내기" },
     "otpauth URI list": { en: "otpauth URI list", ko: "otpauth URI 목록" },

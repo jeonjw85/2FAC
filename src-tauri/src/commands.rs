@@ -519,7 +519,7 @@ pub fn import_file(
             let imported = data.accounts.len();
             session.data = data;
             ImportSummary {
-                format: "2fac backup".to_string(),
+                format: "2FAC backup".to_string(),
                 imported,
                 skipped: 0,
                 replaced: true,
