@@ -28,3 +28,4 @@ data-encoding = "2"
 zeroize = { version = "1", features = ["derive", "serde"] }
 rand = "0.8"
 thiserror = "2"
+tauri-plugin-updater = "2.10.1"
