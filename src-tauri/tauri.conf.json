@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "2fac",
+  "productName": "2FAC",
   "version": "0.1.0",
   "identifier": "kr.jjw.2fac",
   "build": {
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "2fac",
+        "title": "2FAC",
         "width": 420,
         "height": 680,
         "minWidth": 380,
