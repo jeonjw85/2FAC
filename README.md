@@ -2,8 +2,8 @@
 
 [한국어](README.ko.md)
 
-[![CI](https://github.com/jeonjw85/profNote/actions/workflows/ci.yml/badge.svg)](https://github.com/jeonjw85/profNote/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/jeonjw85/profNote)](https://github.com/jeonjw85/profNote/releases/latest)
+[![CI](https://github.com/jeonjw85/2FAC/actions/workflows/ci.yml/badge.svg)](https://github.com/jeonjw85/2FAC/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/jeonjw85/2FAC)](https://github.com/jeonjw85/2FAC/releases/latest)
 
 Local-first TOTP authenticator for the desktop. Secrets never leave this machine.
 
