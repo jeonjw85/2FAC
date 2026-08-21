@@ -11,6 +11,10 @@ The vault is encrypted with Argon2id and AES-256-GCM. Codes are computed in Rust
 
 UI language follows the OS (English / Korean).
 
+<img src="screenshots/locked.png" width="220" alt="Lock screen">
+<img src="screenshots/vault.png" width="220" alt="Account list">
+<img src="screenshots/add.png" width="220" alt="Add account">
+
 ## Install
 
 Download a build from [Releases](https://github.com/jeonjw85/2FAC/releases).
