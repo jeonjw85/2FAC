@@ -19,7 +19,9 @@ UI 언어는 OS를 따릅니다 (영어 / 한국어).
 | ----------------------------- | ----------- | ----------------------- |
 | `.dmg` (Apple Silicon, Intel) | NSIS `.exe` | `.AppImage` 또는 `.deb` |
 
-서명이 없습니다. macOS: 시스템 설정 → 개인정보 보호 및 보안 → 확인 후 열기. Windows는 처음 실행 시 SmartScreen이 경고할 수 있습니다.
+macOS 빌드는 ad-hoc 서명입니다 (Developer ID 아님, 공증 없음). Gatekeeper는 그대로 막습니다: 시스템 설정 → 개인정보 보호 및 보안 → 확인 후 열기. Windows·Linux는 미서명입니다. Windows는 처음 실행 시 SmartScreen이 경고할 수 있습니다.
+
+앱 안 업데이트는 GitHub Releases의 minisign 서명을 검증합니다. Apple/Microsoft 코드 서명이 아닙니다.
 
 같은 `kr.jjw.2fac` 앱 위에 새 빌드를 설치하면 Vault는 유지됩니다. Downloads에 받은 복사본을 따로 실행하지 마세요.
 

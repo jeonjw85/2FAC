@@ -19,7 +19,9 @@ Download a build from [Releases](https://github.com/jeonjw85/2FAC/releases).
 | -------------------------------- | ----------- | --------------------- |
 | `.dmg` (Apple Silicon and Intel) | NSIS `.exe` | `.AppImage` or `.deb` |
 
-Builds are unsigned. macOS: System Settings → Privacy & Security → Open Anyway. Windows SmartScreen may warn on first run.
+macOS builds are ad-hoc signed (not Developer ID, not notarized). Gatekeeper still blocks first launch: System Settings → Privacy & Security → Open Anyway. Windows and Linux builds are unsigned; SmartScreen may warn on first run.
+
+In-app updates are minisign-verified against GitHub Releases. That is not Apple or Microsoft code signing.
 
 Installing a newer build over the same `kr.jjw.2fac` app keeps the vault. Do not run a second copy from Downloads.
 

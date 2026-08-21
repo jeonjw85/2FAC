@@ -59,7 +59,7 @@ jobs:
         with:
           tagName: v__VERSION__
           releaseName: "2FAC v__VERSION__"
-          releaseBody: "In-place update replaces the current app. Vault stays. Unsigned: macOS Privacy & Security → Open Anyway. Source is this repository (GPL-3.0-only)."
+          releaseBody: "In-place update replaces the current app. Vault stays. macOS is ad-hoc signed (not notarized): Privacy & Security → Open Anyway. Windows/Linux unsigned; SmartScreen may warn. Source is this repository (GPL-3.0-only)."
           releaseDraft: true
           prerelease: false
           updaterJsonPreferNsis: true
