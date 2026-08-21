@@ -1,19 +1,23 @@
+<div align="center">
+
 # 2FAC
 
-[한국어](README.ko.md)
-
-[![CI](https://github.com/jeonjw85/2FAC/actions/workflows/ci.yml/badge.svg)](https://github.com/jeonjw85/2FAC/actions/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/jeonjw85/2FAC/ci.yml?label=CI)](https://github.com/jeonjw85/2FAC/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/jeonjw85/2FAC)](https://github.com/jeonjw85/2FAC/releases/latest)
+
+<img src="screenshots/locked.png" width="220" alt="Lock screen">
+<img src="screenshots/vault.png" width="220" alt="Account list">
+<img src="screenshots/add.png" width="220" alt="Add account">
+
+</div>
+
+[한국어](README.ko.md)
 
 Local-first TOTP authenticator for the desktop. Secrets never leave this machine.
 
 The vault is encrypted with Argon2id and AES-256-GCM. Codes are computed in Rust. The UI never sees raw secrets. There is no cloud, no account, and no telemetry. The only network use is a signed update check against GitHub Releases.
 
 UI language follows the OS (English / Korean).
-
-<img src="screenshots/locked.png" width="220" alt="Lock screen">
-<img src="screenshots/vault.png" width="220" alt="Account list">
-<img src="screenshots/add.png" width="220" alt="Add account">
 
 ## Install
 

@@ -1,19 +1,23 @@
+<div align="center">
+
 # 2FAC
 
-[English](README.md)
-
-[![CI](https://github.com/jeonjw85/2FAC/actions/workflows/ci.yml/badge.svg)](https://github.com/jeonjw85/2FAC/actions/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/jeonjw85/2FAC/ci.yml?label=CI)](https://github.com/jeonjw85/2FAC/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/jeonjw85/2FAC)](https://github.com/jeonjw85/2FAC/releases/latest)
+
+<img src="screenshots/locked.png" width="220" alt="잠금 화면">
+<img src="screenshots/vault.png" width="220" alt="계정 목록">
+<img src="screenshots/add.png" width="220" alt="계정 추가">
+
+</div>
+
+[English](README.md)
 
 데스크톱용 로컬 우선 TOTP 인증기입니다. 비밀키는 이 기기를 떠나지 않습니다.
 
 Vault는 Argon2id와 AES-256-GCM으로 암호화됩니다. 코드는 Rust에서 계산하고, UI는 원본 시크릿을 보지 않습니다. 클라우드, 계정, 텔레메트리는 없습니다. 네트워크는 GitHub Releases의 서명된 업데이트 확인에만 씁니다.
 
 UI 언어는 OS를 따릅니다 (영어 / 한국어).
-
-<img src="screenshots/locked.png" width="220" alt="잠금 화면">
-<img src="screenshots/vault.png" width="220" alt="계정 목록">
-<img src="screenshots/add.png" width="220" alt="계정 추가">
 
 ## 설치
 
